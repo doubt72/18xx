@@ -17,6 +17,8 @@ module Engine
         CERT_LIMIT = { 2 => 24, 3 => 16, 4 => 12 }.freeze
         STARTING_CASH = { 2 => 720, 3 => 540, 4 => 480 }.freeze
 
+        TILE_TYPE = :lawson
+
         MARKET = [
           %w[75 80 85 90 100 110 125 140 160 180 200 225 250 275 300],
           %w[70 75 80 85 95p 105 115 130 145 160 180 200 225 250 275],
