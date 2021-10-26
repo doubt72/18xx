@@ -73,7 +73,7 @@ module Engine
           'X3' => {
             'count' => 1,
             'color' => 'green',
-            'code' => 'city=revenue:40;city=revenue:40,slots:2;city=revenue:40;path=a:0,b:_1;path=a:0,b:_2;path=a:1,b:_0;path=a:2,b:_1;path=a:3,b:_1;path=a:5,b:_2;label=T',
+            'code' => 'city=revenue:50;city=revenue:50,slots:2;city=revenue:50;path=a:0,b:_1;path=a:0,b:_2;path=a:1,b:_0;path=a:2,b:_1;path=a:3,b:_1;path=a:5,b:_2;label=T',
           },
           'X10' => {
             'count' => 3,
@@ -292,7 +292,7 @@ module Engine
           # 'T24' => 'Itoigawa',
           'T32' => 'Nakatsugawa',
           'T36' => 'Hamamatsu',
-          'U23' => 'Joetsu',
+          'U23' => 'Naoetsu',
           'U25' => 'Nagano',
           'U27' => 'Matsumoto',
           # 'U35' => 'Yazu',
@@ -314,7 +314,7 @@ module Engine
           # 'Y9' => 'Oga',
           # 'Y13' => 'Sakata',
           'Y15' => 'Tsuruoka',
-          # 'Y21' => 'Aizuwakamatzu',
+          'Y21' => 'Aizu- wakamatzu',
           'Y25' => 'Nikko',
           'Y27' => 'Tochigi',
           'Y29' => 'Urawa',
@@ -466,32 +466,26 @@ module Engine
             #   T12
             # ] => '',
             %w[
-              B44 D52 E39 E51 G19 G21 G33 G35 H20 I37 J32 K3 K5 K7 K13 K15 K31 K39 K43 L2 L16 L34 M3 M5 M9 M11 M37 N6 O13 O15 O17 O31 P8 P14 P34 Q27 Q33 Q37
-              R12 R14 S11 S13 S31 T24 U35 V22 W35 Y9 Y13 Y17 Z12 Z24 AA3 AA25 AA29 AA31 AA33 AB12 AB16 AB20 AB22 AB30 AC3 AC5 AC9 AC15 AD8 AD12
+              B44 D52 E39 E51 G19 G21 G33 G35 H20 I37 J32 K3 K5 K7 K13 K15 K31 K39 K43 L2 L16 L34 M3 M5 M9 M11 M37 N6 O13 O15 O17 O31 P8 P14 P34 Q27 Q33 Q37 R12 R14 S11 S13 S31 T24 U35 V22 W35 Y9 Y13 Y17 Z12 Z24 AA3 AA25 AA29 AA31 AA33 AB12 AB16 AB20 AB22 AB30 AC3 AC5 AC9 AC15 AD8 AD12
             ] => '',
             %w[
-              G15 G17 H16 L4 L6 L8 M17 N18 N10 O11
-              B42 B50 B52 C49 D42 E45 E37 H36 O33 Q31 T30 U29 V26 W29 X26 Z6 Z22 AA11 AB8 AB14 AC7 AC11
+              G15 G17 H16 L4 L6 L8 M17 N18 N10 O11 B42 B50 B52 C49 D42 E45 E37 H36 O33 Q31 T30 U29 V26 W29 X20 X26 Z6 Z22 AA11 AB8 AB14 AC7 AC11
             ] => 'upgrade=cost:40,terrain:mountain',
             %w[
-              H12 I15 J10 L12 L14 M13 N8 N12 O9 P12 Q11 R10 S9
-              D44 D46 D48 I41 J42 K41 I33 I35 J34 K33 L32 L40 M33 N34 O41 P38 P40 Q29 S29 T34 U31 V24 V28 W23 W25 W31 X20 X22 X24 Y19 Y21 Y23 Z14 Z16 Z20 AA9 AA15 AB6
+              H12 I15 J10 L12 L14 M13 N8 N12 O9 P12 Q11 R10 S9 D44 D46 D48 I41 J42 K41 I33 I35 J34 K33 L32 L40 M33 N34 O41 P38 P40 Q29 S29 T34 U31 V24 V28 W23 W25 W31 X22 X24 Y19 Y23 Z14 Z16 Z20 AA9 AA15 AB6
             ] => 'upgrade=cost:80,terrain:mountain',
-            %w[
-              M15 N16
-              R28 T26 T28 U33 V32
-            ] => 'upgrade=cost:120,terrain:mountain',
+            %w[M15 N16 R28 T26 T28 U33 V32] => 'upgrade=cost:120,terrain:mountain',
             %w[J40 H34 T32 Y25 Z18 AA7 AA13 AA17] => 'town=revenue:0;upgrade=cost:40,terrain:mountain',
             %w[S27] => 'town=revenue:0;upgrade=cost:80,terrain:mountain',
             %w[
-              A43 C43 C47 D38 D50 E43 E47 F38 F44 H14 H32 H42 H44 J14 J16 J36 L30 K1 K9 K11 M7 M31 N14 N32 O7 O39 P10 P28 P30 P36 Q9 Q35 R24 R30
-              S35 T12 U23 U27 V30 W21 W33 X18 X28 X30 Y15 Y27 Y29 Z8 Z26 Z28 Z30 Z32 Z34 AA5 AA19 AA23 AB24 AC1 AC13 AC17 AD6 AD10 AD14
+              A43 C43 C47 D38 D50 E43 E47 F38 F44 H14 H32 H42 H44 J14 J16 J36 L30 K9 K11 M7 M31 N14 N32 O7 O39 P10 P28 P30 P36 Q9 Q35 R24 R30 S35 T12 U23 U27 V30 W21 W33 X18 X28 X30 Y15 Y27 Y29 Z8 Z26 Z28 Z30 Z32 Z34 AA5 AA19 AA23 AB24 AC1 AC13 AC17 AD6 AD10 AD14
             ] => 'town=revenue:0',
             %w[F36] => 'town=revenue:0;border=edge:0,cost:40,type:mountain',
             %w[I13] => 'city=revenue:0;border=edge:1,cost:80,type:mountain',
             %w[I39] => 'town=revenue:0;border=edge:3,cost:80,type:water',
+            %w[L10] => 'city=revenue:0;border=edge:2,cost:40,type:mountain',
             %w[L38] => 'city=revenue:0;border=edge:4,cost:60,type:water',
-            %w[C45 C51 E49 H40 I31 I43 K35 L10 M35 N36 Q13 R26 S25 S33 T36 V34 W19 W27 Y29 Z10 Z32 AA21 AA27 AB4 AB10] => 'city=revenue:0',
+            %w[C45 E49 H40 I31 I43 K1 K35 M35 N36 Q13 R26 S25 S33 T36 V34 W27 Y29 Z10 Z32 AA21 AA27 AB4 AB10] => 'city=revenue:0',
             %w[D40] => 'city=revenue:0;border=edge:3,cost:60,type:water;border=edge:4,type:impassible',
             %w[G37] => 'city=revenue:0;label=Y;border=edge:2,cost:40,type:mountain;border=edge:3,cost:40,type:mountain',
             %w[I43 U25] => 'city=revenue:0;border=edge:2,cost:80,type:mountain',
@@ -499,7 +493,7 @@ module Engine
             %w[M35] => 'city=revenue:0;border=edge:0,type:impassible',
             %w[N36] => 'city=revenue:0;border=edge:1,cost:60,type:water',
             %w[H38] => 'city=revenue:0;label=Ku',
-            %w[C41 J12 O35 R32 AB18] => 'city=revenue:0;label=Y',
+            %w[C41 C51 J12 O35 R32 W19 AB18] => 'city=revenue:0;label=Y',
           },
           gray: {
             %w[A45] => 'city=revenue:yellow_20|green_30|brown_40,slots:2;path=a:0,b:_0;path=a:3,b:_0;path=a:4,b:_0',
@@ -510,7 +504,8 @@ module Engine
           yellow: {
             %w[O37] => 'city=revenue:30;city=revenue:30;path=a:2,b:_0;path=a:4,b:_1;label=O',
             %w[X32] => 'city=revenue:30;path=a:4,b:_0;label=Z',
-            %w[Y31] => 'city=revenue:30;city=revenue:30,slots:2;city=revenue:30;path=a:0,b:_2;path=a:1,b:_0;path=a:2,b:_1;path=a:3,b:_1;path=a:5,b:_2;label=T',
+            %w[Y21] => 'city=revenue:20;path=a:2,b:_0;path=a:5,b:_0',
+            %w[Y31] => 'city=revenue:40;city=revenue:40,slots:2;city=revenue:40;path=a:0,b:_2;path=a:1,b:_0;path=a:2,b:_1;path=a:3,b:_1;path=a:5,b:_2;label=T',
           },
           red: {
           },
@@ -534,7 +529,7 @@ module Engine
             %w[G41] => 'offboard=revenue:yellow_20|green_30|brown_40;path=a:4,b:_0;border=edge:3',
             %w[H18] => 'border=edge:5',
             %w[H22] => 'offboard=revenue:yellow_40|green_60;path=a:3,b:_0;border=edge:4',
-            %w[H30 Q25] => 'offboard=revenue:yellow_20|green_30|brown_40;path=a:5,b:_0',
+            %w[H30] => 'offboard=revenue:yellow_20|green_30|brown_40;path=a:5,b:_0',
             %w[I11 S23 AD4] => 'offboard=revenue:yellow_20|green_30|brown_40;path=a:0,b:_0;',
             %w[I19] => 'offboard=revenue:yellow_40|brown_20;path=a:3,b:_0;border=edge:0;border=edge:2;border=edge:4',
             %w[I21] => 'border=edge:1;border=edge:3',
@@ -545,6 +540,7 @@ module Engine
             %w[M39] => 'offboard=revenue:yellow_20|green_30|brown_40;path=a:2,b:_0;border=edge:4',
             %w[N38] => 'offboard=revenue:yellow_30|green_40|brown_60|gray_80;path=a:3,b:_0;path=a:4,b:_0;border=edge:1',
             %w[P32] => '',
+            %w[Q25] => 'offboard=revenue:yellow_30|green_40|brown_60;path=a:5,b:_0',
             %w[V18] => 'offboard=revenue:yellow_20|green_30|brown_40;path=a:5,b:_0;border=edge:0',
             %w[V20] => 'offboard=revenue:0;path=a:4,b:_0;border=edge:3',
             %w[Y33] => 'offboard=revenue:yellow_40|green_60|brown_80|gray_100;path=a:2,b:_0;path=a:3,b:_0',
